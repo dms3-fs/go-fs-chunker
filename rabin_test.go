@@ -6,8 +6,8 @@ import (
 	"io"
 	"testing"
 
-	blocks "github.com/ipfs/go-block-format"
-	util "github.com/ipfs/go-ipfs-util"
+	blocks "github.com/dms3-fs/go-block-format"
+	util "github.com/dms3-fs/go-fs-util"
 )
 
 func TestRabinChunking(t *testing.T) {

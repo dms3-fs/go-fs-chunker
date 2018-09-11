@@ -7,8 +7,8 @@ package chunk
 import (
 	"io"
 
-	logging "github.com/ipfs/go-log"
-	mpool "github.com/libp2p/go-msgio/mpool"
+	logging "github.com/dms3-fs/go-log"
+	mpool "github.com/dms3-p2p/go-msgio/mpool"
 )
 
 var log = logging.Logger("chunk")

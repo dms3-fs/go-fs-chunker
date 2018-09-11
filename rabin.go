@@ -7,8 +7,8 @@ import (
 	"github.com/whyrusleeping/chunker"
 )
 
-// IpfsRabinPoly is the irreducible polynomial of degree 53 used by for Rabin.
-var IpfsRabinPoly = chunker.Pol(17437180132763653)
+// Dms3FsRabinPoly is the irreducible polynomial of degree 53 used by for Rabin.
+var Dms3FsRabinPoly = chunker.Pol(17437180132763653)
 
 // Rabin implements the Splitter interface and splits content with Rabin
 // fingerprints.
@@ -30,7 +30,7 @@ func NewRabin(r io.Reader, avgBlkSize uint64) *Rabin {
 // the given min, average and max block sizes.
 func NewRabinMinMax(r io.Reader, min, avg, max uint64) *Rabin {
 	h := fnv.New32a()
-	ch := chunker.New(r, IpfsRabinPoly, h, avg, min, max)
+	ch := chunker.New(r, Dms3FsRabinPoly, h, avg, min, max)
 
 	return &Rabin{
 		r:      ch,
